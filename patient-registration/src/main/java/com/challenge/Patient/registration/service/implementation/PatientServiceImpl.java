@@ -9,6 +9,7 @@ import com.challenge.Patient.registration.repository.PatientRepository;
 import com.challenge.Patient.registration.service.CloudinaryService;
 import com.challenge.Patient.registration.service.NotificationService;
 import com.challenge.Patient.registration.service.PatientService;
+import jakarta.transaction.Transactional;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatusCode;
@@ -31,6 +32,7 @@ public class PatientServiceImpl implements PatientService {
     NotificationService notificationService;
 
     @Override
+    @Transactional
     public PatientEntity addPatient(PatientCreationRequest patient, MultipartFile documentPhoto) throws IOException {
         var patientExisted = patientRepository.findByEmail(patient.getEmail());
 

@@ -38,13 +38,14 @@ The system is designed with future expansion in mind, including SMS notification
 ### Requirements
 - **Docker** and **Docker Compose** installed.
 - A Gmail account with an **App Password** enabled (for sending confirmation emails).
+- A Cloudinary account to upload images.
 
 ### Setup
 
 1. Clone the repository:
     ```bash
-    git clone https://github.com/challengeLightIt/patient-management.git
-    cd patient-management
+    git clone https://github.com/challengeLightIt/patient_management.git
+    cd patient_management
     ```
 
 2. Configure environment variables:
